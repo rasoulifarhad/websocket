@@ -1,4 +1,4 @@
-## WebSocket
+## WebSocket 
 
 > See [websockets pubsub spring boot](https://ably.com/blog/websockets-pubsub-spring-boot)
 
