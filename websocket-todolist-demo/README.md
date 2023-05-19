@@ -21,7 +21,7 @@ creating a simple collaborative TODO list. Anyone will be able to add new TODOs,
 ### Test 
 
 
-<details open><summary><i>create todo</i></summary><blockquote>
+<details open><summary><i>Create todo</i></summary><blockquote>
 
 ```sh
 curl -s -X POST localhost:8080/api -H 'Content-Type: application/json' --cookie "username=farhad" -d'
@@ -42,7 +42,7 @@ curl -s -X POST localhost:8080/api -H 'Content-Type: application/json' --cookie 
 
 ---
 
-<details open><summary><i>create todo</i></summary><blockquote>
+<details open><summary><i>Create todo</i></summary><blockquote>
 
 ```sh
 curl -s -X POST localhost:8080/api -H 'Content-Type: application/json' --cookie "username=ali" -d'
@@ -63,7 +63,7 @@ curl -s -X POST localhost:8080/api -H 'Content-Type: application/json' --cookie 
 
 ---
 
-<details open><summary><i>create todo</i></summary><blockquote>
+<details open><summary><i>Create todo</i></summary><blockquote>
 
 ```sh
 curl -s -X POST localhost:8080/api -H 'Content-Type: application/json' --cookie "username=karim" -d'
@@ -122,7 +122,7 @@ curl -s -X GET localhost:8080/api -H 'Content-Type: application/json'| jq '.'
 
 ---
 
-<details open><summary><i>delete todo(username not match)</i></summary><blockquote>
+<details open><summary><i>Delete todo(username not match)</i></summary><blockquote>
 
 ```sh
 curl -s -X DELETE localhost:8080/api/3 -H 'Content-Type: application/json' --cookie "username=farhad"  ; echo
@@ -210,7 +210,7 @@ curl -s -X GET localhost:8080/api -H 'Content-Type: application/json'| jq '.'
 
 ---
 
-<details open><summary><i>login and redirect to all todos</i></summary><blockquote>
+<details open><summary><i>Login and redirect to all todos</i></summary><blockquote>
 
 ```sh
 curl -L -s -X GET localhost:8080/auth/login?username=farhad -H 'Content-Type: application/json' | jq '.'
@@ -241,7 +241,7 @@ curl -L -s -X GET localhost:8080/auth/login?username=farhad -H 'Content-Type: ap
 
 ---
 
-<details open><summary><i>logout and redirect to all todos</i></summary><blockquote>
+<details open><summary><i>Logout and redirect to all todos</i></summary><blockquote>
 
 ```sh
 curl -L -s -X GET localhost:8080/auth/logout -H 'Content-Type: application/json' --cookie "username=farhad" | jq '.'
