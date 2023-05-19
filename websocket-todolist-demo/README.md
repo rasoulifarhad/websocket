@@ -85,7 +85,7 @@ curl -s -X POST http://localhost:8080/api -H 'Content-Type: application/json' --
 ---
 
 
-<details open><summary><i>create todo</i></summary><blockquote>
+<details open><summary><i>Get all todos</i></summary><blockquote>
 
 ```sh
 curl -s -X GET http://localhost:8080/api -H 'Content-Type: application/json'| jq '.'
@@ -122,7 +122,7 @@ curl -s -X GET http://localhost:8080/api -H 'Content-Type: application/json'| jq
 
 ---
 
-<details open><summary><i>create todo</i></summary><blockquote>
+<details open><summary><i>delete todo(username not match)</i></summary><blockquote>
 
 ```sh
 curl -s -X DELETE http://localhost:8080/api/3 -H 'Content-Type: application/json' --cookie "username=farhad"  ; echo
@@ -132,7 +132,7 @@ curl -s -X DELETE http://localhost:8080/api/3 -H 'Content-Type: application/json
 
 ---
 
-<details open><summary><i>create todo</i></summary><blockquote>
+<details open><summary><i>Get all todos</i></summary><blockquote>
 
 ```sh
 curl -s -X GET http://localhost:8080/api -H 'Content-Type: application/json'| jq '.'
@@ -169,7 +169,7 @@ curl -s -X GET http://localhost:8080/api -H 'Content-Type: application/json'| jq
 
 ---
 
-<details open><summary><i>create todo</i></summary><blockquote>
+<details open><summary><i>Delete todo (username matched)</i></summary><blockquote>
 
 ```sh
 curl -s -X DELETE http://localhost:8080/api/3 -H 'Content-Type: application/json' --cookie "username=karim"  ; echo
@@ -179,7 +179,7 @@ curl -s -X DELETE http://localhost:8080/api/3 -H 'Content-Type: application/json
 
 ---
 
-<details open><summary><i>create todo</i></summary><blockquote>
+<details open><summary><i>Get all todos</i></summary><blockquote>
 
 ```sh
 curl -s -X GET http://localhost:8080/api -H 'Content-Type: application/json'| jq '.'
@@ -210,7 +210,7 @@ curl -s -X GET http://localhost:8080/api -H 'Content-Type: application/json'| jq
 
 ---
 
-<details open><summary><i>login</i></summary><blockquote>
+<details open><summary><i>login and redirect to all todos</i></summary><blockquote>
 
 ```sh
 curl -L -s -X GET http://localhost:8080/auth/login?username=farhad -H 'Content-Type: application/json' | jq '.'
@@ -241,7 +241,7 @@ curl -L -s -X GET http://localhost:8080/auth/login?username=farhad -H 'Content-T
 
 ---
 
-<details open><summary><i>logout</i></summary><blockquote>
+<details open><summary><i>logout and redirect to all todos</i></summary><blockquote>
 
 ```sh
 curl -L -s -X GET http://localhost:8080/auth/logout -H 'Content-Type: application/json' --cookie "username=farhad" | jq '.'
