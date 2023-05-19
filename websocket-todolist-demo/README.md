@@ -24,7 +24,7 @@ creating a simple collaborative TODO list. Anyone will be able to add new TODOs,
 <details open><summary><i>create todo</i></summary><blockquote>
 
 ```sh
-curl -s -X POST http://localhost:8080/api -H 'Content-Type: application/json' --cookie "username=farhad" -d'
+curl -s -X POST localhost:8080/api -H 'Content-Type: application/json' --cookie "username=farhad" -d'
 {
    "text": "I am farhad!"
 }'; echo
@@ -45,7 +45,7 @@ curl -s -X POST http://localhost:8080/api -H 'Content-Type: application/json' --
 <details open><summary><i>create todo</i></summary><blockquote>
 
 ```sh
-curl -s -X POST http://localhost:8080/api -H 'Content-Type: application/json' --cookie "username=ali" -d'
+curl -s -X POST localhost:8080/api -H 'Content-Type: application/json' --cookie "username=ali" -d'
 {
   "text": "I am ali!"
 }'; echo
@@ -66,7 +66,7 @@ curl -s -X POST http://localhost:8080/api -H 'Content-Type: application/json' --
 <details open><summary><i>create todo</i></summary><blockquote>
 
 ```sh
-curl -s -X POST http://localhost:8080/api -H 'Content-Type: application/json' --cookie "username=karim" -d'
+curl -s -X POST localhost:8080/api -H 'Content-Type: application/json' --cookie "username=karim" -d'
 {
   "text": "I am karim!"
 }'; echo
@@ -88,7 +88,7 @@ curl -s -X POST http://localhost:8080/api -H 'Content-Type: application/json' --
 <details open><summary><i>Get all todos</i></summary><blockquote>
 
 ```sh
-curl -s -X GET http://localhost:8080/api -H 'Content-Type: application/json'| jq '.'
+curl -s -X GET localhost:8080/api -H 'Content-Type: application/json'| jq '.'
 ```
 
 <details><summary><i>Response</i></summary>
@@ -125,7 +125,7 @@ curl -s -X GET http://localhost:8080/api -H 'Content-Type: application/json'| jq
 <details open><summary><i>delete todo(username not match)</i></summary><blockquote>
 
 ```sh
-curl -s -X DELETE http://localhost:8080/api/3 -H 'Content-Type: application/json' --cookie "username=farhad"  ; echo
+curl -s -X DELETE localhost:8080/api/3 -H 'Content-Type: application/json' --cookie "username=farhad"  ; echo
 ```
 
 </blockquote></details>
@@ -135,7 +135,7 @@ curl -s -X DELETE http://localhost:8080/api/3 -H 'Content-Type: application/json
 <details open><summary><i>Get all todos</i></summary><blockquote>
 
 ```sh
-curl -s -X GET http://localhost:8080/api -H 'Content-Type: application/json'| jq '.'
+curl -s -X GET localhost:8080/api -H 'Content-Type: application/json'| jq '.'
 ```
 
 <details><summary><i>Response</i></summary>
@@ -172,7 +172,7 @@ curl -s -X GET http://localhost:8080/api -H 'Content-Type: application/json'| jq
 <details open><summary><i>Delete todo (username matched)</i></summary><blockquote>
 
 ```sh
-curl -s -X DELETE http://localhost:8080/api/3 -H 'Content-Type: application/json' --cookie "username=karim"  ; echo
+curl -s -X DELETE localhost:8080/api/3 -H 'Content-Type: application/json' --cookie "username=karim"  ; echo
 ```
 
 </blockquote></details>
@@ -182,7 +182,7 @@ curl -s -X DELETE http://localhost:8080/api/3 -H 'Content-Type: application/json
 <details open><summary><i>Get all todos</i></summary><blockquote>
 
 ```sh
-curl -s -X GET http://localhost:8080/api -H 'Content-Type: application/json'| jq '.'
+curl -s -X GET localhost:8080/api -H 'Content-Type: application/json'| jq '.'
 ```
 
 <details><summary><i>Response</i></summary>
@@ -213,7 +213,7 @@ curl -s -X GET http://localhost:8080/api -H 'Content-Type: application/json'| jq
 <details open><summary><i>login and redirect to all todos</i></summary><blockquote>
 
 ```sh
-curl -L -s -X GET http://localhost:8080/auth/login?username=farhad -H 'Content-Type: application/json' | jq '.'
+curl -L -s -X GET localhost:8080/auth/login?username=farhad -H 'Content-Type: application/json' | jq '.'
 ```
 
 <details><summary><i>Response</i></summary>
@@ -244,7 +244,7 @@ curl -L -s -X GET http://localhost:8080/auth/login?username=farhad -H 'Content-T
 <details open><summary><i>logout and redirect to all todos</i></summary><blockquote>
 
 ```sh
-curl -L -s -X GET http://localhost:8080/auth/logout -H 'Content-Type: application/json' --cookie "username=farhad" | jq '.'
+curl -L -s -X GET localhost:8080/auth/logout -H 'Content-Type: application/json' --cookie "username=farhad" | jq '.'
 ```
 
 <details><summary><i>Response</i></summary>
